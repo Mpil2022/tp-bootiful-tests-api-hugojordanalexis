@@ -27,13 +27,13 @@ jobs:
     - name: Build docker image
       run: docker build . --file Dockerfile --tag api-adder
 
-  docker_run :
+  container-job:
     needs: [build]
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run docker
-      run: docker run api-adder
+    container: doptopenjdk/openjdk11:latest
+    services:
+      api-adder:
+        image: api-adder
 
   newman:
     needs: [build]
