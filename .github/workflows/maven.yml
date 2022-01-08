@@ -26,9 +26,13 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Build docker image
       run: docker build . --file Dockerfile --tag api-adder
-    - name: Run docker
-      run: docker run api-adder
 
+  docker_run :
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run docker
+      run: docker run api-adder
 
   newman:
     needs: [build]
