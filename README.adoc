@@ -11,6 +11,9 @@ Jauffrey Flach <jauffrey.flach@gmail.com>
 == A rendre
 NOTE: Ce TP se compose de 3 parties. Il faudra rendre uniquement la 3ème partie, mais vous aurez besoin des 2 autres parties pour faire fonctionner la troisième. Faites bien attention d'avoir des éléments fonctionnels au début de chaque séance!
 
+== Stack (Tests API)
+Postman/Newman (image docker) avec Github actions
+
 == Pré-requis
 ** un compte Github
 ** Internet
