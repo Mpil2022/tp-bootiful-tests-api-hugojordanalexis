@@ -22,8 +22,7 @@ public class AdderController {
         return adderService.add(value);
     }
 
-    @GetMapping("/accumulate")
-    @PostMapping
+    @PostMapping("/accumulate")
     public int accumulate(@RequestParam int value) {
         return adderService.accumulate(value);
     }
