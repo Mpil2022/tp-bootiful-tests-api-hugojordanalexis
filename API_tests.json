@@ -72,8 +72,9 @@
 							"     pm.response.to.be.json;\r",
 							"});\r",
 							"\r",
+							"var res = parseInt(pm.request.toJSON().url.query[0].value); \r",
 							"pm.test(\"response correct\", ()=>{\r",
-							"    pm.expect(pm.response.json()).to.eql(pm.collectionVariables.get(\"CurrentValue\")+ 5)\r",
+							"    pm.expect(pm.response.json()).to.eql(pm.collectionVariables.get(\"CurrentValue\")+ res)\r",
 							"})"
 						],
 						"type": "text/javascript"
