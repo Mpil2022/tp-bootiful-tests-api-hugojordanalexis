@@ -58,7 +58,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags:  ${{ secrets.DOCKER_USERNAME }}/test-api:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/test-api:latest
 
   newman:
     needs: [push]
@@ -77,4 +77,4 @@ jobs:
     services:
       # Label used to access the service container
       api-adder:
-        image:  ${{ secrets.DOCKER_USERNAME }}/test-api:latest
+        image: ${{ secrets.DOCKER_USERNAME }}/test-api:latest
