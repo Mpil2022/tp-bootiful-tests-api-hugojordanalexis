@@ -63,8 +63,10 @@ jobs:
   newman:
     needs: [push]
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v2
+          
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
@@ -77,4 +79,4 @@ jobs:
     services:
       # Label used to access the service container
       api-adder:
-        image: test-api:latest
+        image: scherringj/test-api:latest
