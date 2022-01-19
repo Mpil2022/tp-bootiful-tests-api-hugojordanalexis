@@ -44,21 +44,9 @@ jobs:
         push: true
         tags: api-adder
 
-  container-job:
-    needs: [push]
-    # Containers must run in Linux based operating systems
-    runs-on: ubuntu-latest
-    # Docker Hub image that `container-job` executes in
-    container: node:10.18-jessie
-
-    # Service containers to run with `container-job`
-    services:
-      # Label used to access the service container
-      api-adder:
-        image: api-adder
 
   newman:
-    needs: [container-job]
+    
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
