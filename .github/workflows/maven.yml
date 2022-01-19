@@ -58,7 +58,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: api-adder
+        tags: test-api
 
   newman:
     needs: [push]
@@ -77,4 +77,4 @@ jobs:
     services:
       # Label used to access the service container
       api-adder:
-        image: api-adder
+        image: test-api
