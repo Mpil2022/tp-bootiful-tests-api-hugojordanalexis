@@ -44,13 +44,6 @@ jobs:
         push: true
         tags: api-adder
         
-    container: node:10.18-jessie
-
-    # Service containers to run with `container-job`
-    services:
-      # Label used to access the service container
-      api-adder:
-        image: api-adder
 
   newman:
     needs: [push]
@@ -62,3 +55,11 @@ jobs:
           node-version: '12'
       - run: npm install -g newman
       - run: newman run "API_tests.json"
+      
+    container: node:10.18-jessie
+
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      api-adder:
+        image: api-adder
