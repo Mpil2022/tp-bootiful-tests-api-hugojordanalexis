@@ -77,4 +77,4 @@ jobs:
     services:
       # Label used to access the service container
       api-adder:
-        image: ${{ secrets.DOCKER_USERNAME }}/test-api:latest
+        image: test-api:latest
