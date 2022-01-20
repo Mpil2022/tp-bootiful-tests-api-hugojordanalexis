@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "127.0.0.1:8080/adder/current",
+			"name": "api-adder:8080/adder/current",
 			"event": [
 				{
 					"listen": "test",
@@ -37,9 +37,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8080/adder/current",
+					"raw": "api-adder:8080/adder/current",
 					"host": [
-						"127.0.0.1"
+						"api-adder"
 					],
 					"port": "8080",
 					"path": [
@@ -51,7 +51,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:8080/adder/?value=5",
+			"name": "api-adder:8080/adder/?value=5",
 			"event": [
 				{
 					"listen": "test",
@@ -85,9 +85,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8080/adder/?value=5",
+					"raw": "api-adder:8080/adder/?value=5",
 					"host": [
-						"127.0.0.1"
+						"api-adder"
 					],
 					"port": "8080",
 					"path": [
