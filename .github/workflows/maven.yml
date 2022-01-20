@@ -80,3 +80,5 @@ jobs:
       # Label used to access the service container
       api-adder:
         image: scherringj/test-api:latest
+        ports: 
+        - 8080:8080
